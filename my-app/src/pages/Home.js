@@ -25,7 +25,7 @@ export default function Home({ navigation }) {
                     <TouchableOpacity style={{ paddingRight: 10 }}>
                         <FontAwesome name="bell-o" size={24} color="black" />
                     </TouchableOpacity>
-                    <TouchableOpacity style={{ paddingRight: 10 }}>
+                    <TouchableOpacity onPress={() => navigation.navigate('Wishlist')} style={{ paddingRight: 10 }}>
                         <FontAwesome name="heart-o" size={24} color="black" />
                     </TouchableOpacity>
                     <TouchableOpacity style={{ paddingRight: 10 }} y>
@@ -203,7 +203,9 @@ export default function Home({ navigation }) {
                 <TouchableOpacity>
                     <MaterialCommunityIcons name="lightning-bolt-outline" size={35} color="black" />
                     <Text style={styles.txt}>New</Text></TouchableOpacity>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => {
+                    navigation.navigate('Brands')
+                }}>
                     <Image style={{ height: 35, width: 40, resizeMode: 'contain' }} source={require('../img/star_13692233.png')}></Image>
                     <Text style={styles.txt}>
                         Brands
